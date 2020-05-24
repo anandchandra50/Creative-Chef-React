@@ -1,0 +1,26 @@
+.text__body {
+  font-size: 18px;
+  color: black;
+  opacity: 0.75;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.text__summary {
+  position: fixed;
+  top: 40vh;
+  right: 30vw;
+  width: 15vw;
+  font-size: 16px;
+  color: black;
+  opacity: 0.5;
+  font-weight: bold;
+}
+
+.text__segue {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.text__list {
+  margin-left: 40px;
+}

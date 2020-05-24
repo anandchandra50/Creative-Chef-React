@@ -1,0 +1,31 @@
+.menu-web {
+  position: fixed;
+  top: 35vh;
+  right: 10vw;
+  height: 20vh;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-web__item {
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  opacity: 1;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.menu-web__item-selected {
+  opacity: 1;
+  background-image: url('../../images/highlight.png');
+  background-size: 80% 120%;
+  background-position: left -15px center;
+  background-repeat: no-repeat;
+}
+
+.menu-web__item-selected-long {
+  background-size: 150% 120%;
+}

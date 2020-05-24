@@ -1,0 +1,19 @@
+.text-container {
+  position: absolute;
+  left: 10vw;
+  top: 15vh;
+  width: 36vw;
+}
+
+.text__header {
+  font-weight: bold;
+  font-size: 36px;
+  color: black;
+}
+
+.logo {
+  position: absolute;
+  top: 66vh;
+  left: 20vw;
+  width: 18vw;
+}
