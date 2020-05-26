@@ -5,10 +5,8 @@
   width: 36vw;
 }
 
-.text__header {
-  font-weight: bold;
-  font-size: 36px;
-  color: black;
+.text-container-home {
+  width: 45vw;
 }
 
 .logo {
@@ -16,4 +14,26 @@
   top: 66vh;
   left: 20vw;
   width: 18vw;
+}
+
+@media only screen and (max-width:600px) {
+  .container {
+    position: absolute;
+    left: 8vw;
+    width: 84vw;
+    top: 80vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header {
+    font-weight: bold;
+    font-size: 30px;
+    color: black;
+    margin-bottom: 20vh;
+    background-image: url('../../images/highlight.png');
+    background-size: 90% 120%;
+    background-position: left -15px center;
+    background-repeat: no-repeat;
+  }
 }

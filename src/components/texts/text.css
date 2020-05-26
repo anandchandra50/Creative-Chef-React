@@ -3,6 +3,7 @@
   color: black;
   opacity: 0.75;
   font-family: 'Open Sans', sans-serif;
+  margin-bottom: 60px;
 }
 
 .text__summary {
@@ -16,6 +17,16 @@
   font-weight: bold;
 }
 
+.text__header {
+  font-weight: bold;
+  font-size: 36px;
+  color: black;
+}
+
+.text__header-home {
+  font-size: 60px;
+}
+
 .text__segue {
   text-decoration: underline;
   cursor: pointer;
@@ -23,4 +34,20 @@
 
 .text__list {
   margin-left: 40px;
+}
+
+@media only screen and (max-width:600px) {
+  .text__body {
+    font-size: 16px;
+  }
+  
+  .text__header {
+    font-weight: bold;
+    font-size: 24px;
+    color: black;
+  }
+
+  .text__summary {
+    visibility: hidden;
+  }
 }

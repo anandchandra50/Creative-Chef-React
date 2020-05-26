@@ -7,24 +7,21 @@ import Breakdown from '../texts/breakdown.js';
 import Composition from '../texts/composition.js';
 import Examples from '../texts/examples.js';
 import header from '../../images/header.svg';
-import { useSwipeable, Swipeable } from 'react-swipeable';
+import { isMobile } from "react-device-detect";
+
 
 class Page extends Component {
   state = {
     page: 'Home',
   };
 
-  componentDidMount() {
-    console.log('moutned');
-  }
-
   switchPage = item => {
     this.setState({page:item});
   };
-  
-  textSwitch() {
-    switch (this.state.page) {
-      case 'Intro':
+
+  pageBody(page) {
+    switch (page) {
+      case 'Home':
         return <Intro showNextPage={() => this.switchPage('Palette')}/>;
       case 'Palette':
         return <Palette showNextPage={() => this.switchPage('Breakdown')}/>;
@@ -38,25 +35,53 @@ class Page extends Component {
     }
   }
 
-  render() {
+  pageHeader(page) {
+    switch (page) {
+      case 'Home':
+        return <div className="text__header text__header-home">Independent Chef</div>
+      case 'Home Mobile':
+        return <div className="text__header text__header-home">Introduction</div>
+      default:
+        return <div className="text__header">{page}</div>
+    }
+  }
+
+  webRender() {
+    const containerClass = (this.state.page === 'Home') ? 'text-container text-container-home' : 'text-container';
     return (
-      <Swipeable
-        onSwiped={(eventData) => console.log(eventData)}
-      >
-        {(this.state.page === 'Home') ?
-        <img alt="logo" className="logo" src={header}/>
-        :
-        <div className="text-container">
-          <div className="text__header">{this.state.page}</div>
-          {this.textSwitch()}
+      <div>
+        <div className={containerClass}>
+          {this.pageHeader(this.state.page)}
+          {this.pageBody(this.state.page)}
         </div>
-        }
+
         <MenuWeb
           selected={this.state.page}
-          menuNames={['Home', 'Intro', 'Palette', 'Breakdown', 'Composition', 'Examples']}
+          menuNames={['Home', 'Palette', 'Breakdown', 'Composition', 'Examples']}
           handleMenuChange={this.switchPage}
         />
-      </Swipeable>
+      </div>
+    );
+  }
+
+  mobileRender() {
+    const pages = ['Home', 'Palette', 'Breakdown', 'Composition', 'Examples'];
+    return (
+      <div className="container">
+        <div className="header">Independent Chef</div>
+        {pages.map((page) => (
+          <>
+            {this.pageHeader(page === 'Home' ? 'Home Mobile' : page)}
+            {this.pageBody(page)}
+          </>
+        ))}
+      </div>
+    );
+  }
+
+  render() {
+    return (
+      isMobile ? this.mobileRender() : this.webRender()
     );
   }
 }
