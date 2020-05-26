@@ -7,16 +7,21 @@ import Breakdown from '../texts/breakdown.js';
 import Composition from '../texts/composition.js';
 import Examples from '../texts/examples.js';
 import header from '../../images/header.svg';
+import { useSwipeable, Swipeable } from 'react-swipeable';
 
 class Page extends Component {
   state = {
     page: 'Home',
   };
 
+  componentDidMount() {
+    console.log('moutned');
+  }
+
   switchPage = item => {
     this.setState({page:item});
   };
-
+  
   textSwitch() {
     switch (this.state.page) {
       case 'Intro':
@@ -35,7 +40,9 @@ class Page extends Component {
 
   render() {
     return (
-      <>
+      <Swipeable
+        onSwiped={(eventData) => console.log(eventData)}
+      >
         {(this.state.page === 'Home') ?
         <img alt="logo" className="logo" src={header}/>
         :
@@ -49,7 +56,7 @@ class Page extends Component {
           menuNames={['Home', 'Intro', 'Palette', 'Breakdown', 'Composition', 'Examples']}
           handleMenuChange={this.switchPage}
         />
-      </>
+      </Swipeable>
     );
   }
 }
