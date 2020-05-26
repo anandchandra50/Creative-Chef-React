@@ -21,9 +21,9 @@ class Page extends Component {
   switchPage = item => {
     this.setState({page:item});
   };
-  
-  textSwitch() {
-    switch (this.state.page) {
+
+  displayPage(page) {
+    switch (page) {
       case 'Intro':
         return <Intro showNextPage={() => this.switchPage('Palette')}/>;
       case 'Palette':
@@ -39,16 +39,18 @@ class Page extends Component {
   }
 
   render() {
+    const allPages = ['Intro', 'Palette', 'Breakdown', 'Composition', 'Examples'];
     return (
-      <Swipeable
-        onSwiped={(eventData) => console.log(eventData)}
-      >
-        {(this.state.page === 'Home') ?
+      <div className="page">
         <img alt="logo" className="logo" src={header}/>
-        :
         <div className="text-container">
-          <div className="text__header">{this.state.page}</div>
-          {this.textSwitch()}
+          {allPages.map((page) => (
+            <>
+              <div className="text__header">{page}</div>
+              {this.displayPage(page)}
+            </>
+          ))}
+
         </div>
         }
         <MenuWeb
@@ -56,7 +58,7 @@ class Page extends Component {
           menuNames={['Home', 'Intro', 'Palette', 'Breakdown', 'Composition', 'Examples']}
           handleMenuChange={this.switchPage}
         />
-      </Swipeable>
+      </div>
     );
   }
 }

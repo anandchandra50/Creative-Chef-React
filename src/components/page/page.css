@@ -1,7 +1,13 @@
+.page {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
 .text-container {
-  position: absolute;
-  left: 10vw;
-  top: 15vh;
+  margin: 30vh auto auto 10vw;
+  /* left: 10vw; */
+  /* top: 15vh; */
   width: 36vw;
 }
 
@@ -12,8 +18,9 @@
 }
 
 .logo {
-  position: absolute;
-  top: 66vh;
-  left: 20vw;
+  /* position: absolute; */
+  margin: 66vh auto auto 20vw;
+  /* top: 66vh; */
+  /* left: 20vw; */
   width: 18vw;
 }
