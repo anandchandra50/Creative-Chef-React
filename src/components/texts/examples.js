@@ -22,7 +22,7 @@ export default function Examples(props) {
         Coffee Combination: cold brew and condensed milk and milk (sweet + bitter)<br/>
         Fresh Tomato Sauce: tomato and fresh herbs and onions (sweet + sour)<br/>
         Antipasto Combination: Ham and olives and hard cheese (salty + sour)<br/>
-        Indian Combination: Tamarind sauce and yogurt and cumin (sweet + sour)<br/>
+        Indian Combination: Tamarind sauce and yogurt and cumin (sweet + sour)
 
       </div>
     </>
