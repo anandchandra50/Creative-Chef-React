@@ -5,24 +5,23 @@ export default function Breakdown(props) {
   return (
     <>
       <div className="text__body">
-        This is not a recipe book. This is not kitchen instruction. This is a guide to becoming an independent chef. I hope to offer a set of fundamentals and actionable steps to give you a deeper understanding of food. This should be read as a complete guide, but if you’re looking for the flavor cheatsheet, you’ll find it here.<br/><br/>
-        Regardless of your skill level, I hope that by the end, you understand the fundamentals of dish composition, and gain the confidence that you can create your own dishes in the kitchen, independent from recipes.<br/><br/>
+        Now that we know how to taste dishes, let’s learn how to break them down.
 
-        The structure of the guide is as follows:
+        In addition to flavor, texture, and balance, there are <span className="bold">four key <span className="italic">tangible</span> elements</span> in every dish:
         <ol className="text__list">
-          <li>Think about your palette, and how to taste food intentionally</li>
-          <li>Understand the fundamentals of what makes a great dish</li>
-          <li>Apply those fundamentals to create your own dishes</li>
-          <li>Examples that put it all together</li>
+          <li>Key Ingredients</li>
+          <li>Supporting Ingredients</li>
+          <li>Sauce</li>
+          <li>Presentation</li>
         </ol>
         <br/>
-        We hope these sections will show you the open-endedness and limitless possibilities within food.
+        Let's dive into what they are.
         <br/><br/>
-
-        Lastly, practice is key. As mentioned before, food is an art, and like any other art, you won’t get good at it just by reading this guide. The more you practice thinking and cooking this way, the more confident you will become in making your own dishes. Let’s get started:&nbsp;
-        <div className="text__summary">
-        In 30 seconds: eat my ass
-        </div>
+        The key ingredients are the star of the dish—the center of attention: the steak on a steak dish, the veggies in a salad, or the cheese in a grilled cheese. Without these ingredients, the dish doesn’t make sense.<br/><br/>
+        The supporting ingredients provide balance. Let’s take a burger, for example. The key ingredients are the patty and buns—a burger is not a burger without those. The rest? Supporting ingredients. Cheese adds a creamy texture and salty flavor. Lettuce and tomatoes balance the saltiness of the cheese and prevent the burger from being dry. Supporting ingredients round out the rough edges. Use them intentionally—maybe you wouldn’t add tomatoes when your patty is extra juicy and your bun is spongy.<br/><br/>
+        Next: sauce. Sauce brings the key and supporting ingredients together, and adds a layer of flavor. By itself, a patty can pack a lot of flavor, but with the right sauce, it will display greater depth. Foods that would normally be dry or bland on their own, like french fries or mashed potatoes, also shine with sauce.<br/><br/>
+        And the final touches: presentation. The small touches: the wedge of lime served on the side. The colors. The extra drizzle of sauce around the plate. Etcetera.<br/><br/>
+        Learn to identify each of these tangible elements in the food you eat.<br/><br/>
       </div>
     </>
   );

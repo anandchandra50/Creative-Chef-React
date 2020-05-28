@@ -5,24 +5,25 @@ export default function Examples(props) {
   return (
     <>
       <div className="text__body">
-        This is not a recipe book. This is not kitchen instruction. This is a guide to becoming an independent chef. I hope to offer a set of fundamentals and actionable steps to give you a deeper understanding of food. This should be read as a complete guide, but if you’re looking for the flavor cheatsheet, you’ll find it here.<br/><br/>
-        Regardless of your skill level, I hope that by the end, you understand the fundamentals of dish composition, and gain the confidence that you can create your own dishes in the kitchen, independent from recipes.<br/><br/>
+        Asian Combination: soy sauce and ginger and sesame oil (salty + spicy)<br/>
+        Asian Combination 2: mirin and soy sauce and chili (salty + sour + spicy)<br/>
+        Asian Combination 3: oyster sauce and sweet soy sauce (sweet + salty + seafood)<br/>
+        Dessert Combination: coffee and sugar (bitter + sweet)<br/>
+        Stir-Fried Beef Combination: chopped beef and cooked onions (meat + sweet)<br/>
+        Chicken Combination: chicken and teriyaki sauce (meat + sweet)<br/>
+        Pickled Vegetable Combination: pickles and hot sauce (spicy + sour + salty)<br/>
+        Seafood Combination: shellfish and corn and crushed garlic (salty + sweet + spicy)<br/>
+        Fry Combination: sweet potato and ketchup (sweet + salty + sour)<br/>
+        Soup Stock Combination: seaweed + chicken paste (salty + chicken)<br/>
+        Vegetable Combination: leafy green + salt + sugar (bitter + salt + sweet)<br/>
+        Fruity Dessert: Citrus and berries and sugar (sweet + sour)<br/>
+        Steak Combination: whole steak and peppercorn and salted butter (beef + spicy + salty)<br/>
+        Tex-Mex Combination: cheese and sour cream and lime (salty + sour)<br/>
+        Coffee Combination: cold brew and condensed milk and milk (sweet + bitter)<br/>
+        Fresh Tomato Sauce: tomato and fresh herbs and onions (sweet + sour)<br/>
+        Antipasto Combination: Ham and olives and hard cheese (salty + sour)<br/>
+        Indian Combination: Tamarind sauce and yogurt and cumin (sweet + sour)<br/>
 
-        The structure of the guide is as follows:
-        <ol className="text__list">
-          <li>Think about your palette, and how to taste food intentionally</li>
-          <li>Understand the fundamentals of what makes a great dish</li>
-          <li>Apply those fundamentals to create your own dishes</li>
-          <li>Examples that put it all together</li>
-        </ol>
-        <br/>
-        We hope these sections will show you the open-endedness and limitless possibilities within food.
-        <br/><br/>
-
-        Lastly, practice is key. As mentioned before, food is an art, and like any other art, you won’t get good at it just by reading this guide. The more you practice thinking and cooking this way, the more confident you will become in making your own dishes. Let’s get started:&nbsp;
-        <div className="text__summary">
-        In 30 seconds: eat my ass
-        </div>
       </div>
     </>
   );

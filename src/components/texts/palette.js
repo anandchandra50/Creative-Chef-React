@@ -5,24 +5,23 @@ export default function Palette(props) {
   return (
     <>
       <div className="text__body">
-        This is not a recipe book. This is not kitchen instruction. This is a guide to becoming an independent chef. I hope to offer a set of fundamentals and actionable steps to give you a deeper understanding of food. This should be read as a complete guide, but if you’re looking for the flavor cheatsheet, you’ll find it here.<br/><br/>
-        Regardless of your skill level, I hope that by the end, you understand the fundamentals of dish composition, and gain the confidence that you can create your own dishes in the kitchen, independent from recipes.<br/><br/>
+        Before we talk about recipes and cooking, we need to discuss something more basic: tasting. Think about the last meal you ate. What was good about it? What was not as good? What did it feel like? What flavors stood out? What flavors were subtle, but noticeable?<br/><br/>
+        It’s ok if you don’t have answers to these questions. But consider this: there are two chefs, one who can answer these questions and one who can’t. Who would you rather cook your meal?<br/><br/>
 
-        The structure of the guide is as follows:
+        <span className="bold">The three main <span className="italic">intangible</span> elements</span> to pay attention to are:
         <ol className="text__list">
-          <li>Think about your palette, and how to taste food intentionally</li>
-          <li>Understand the fundamentals of what makes a great dish</li>
-          <li>Apply those fundamentals to create your own dishes</li>
-          <li>Examples that put it all together</li>
+          <li>Flavor</li>
+          <li>Texture</li>
+          <li>Balance</li>
         </ol>
         <br/>
-        We hope these sections will show you the open-endedness and limitless possibilities within food.
+        What does this look like?
         <br/><br/>
-
-        Lastly, practice is key. As mentioned before, food is an art, and like any other art, you won’t get good at it just by reading this guide. The more you practice thinking and cooking this way, the more confident you will become in making your own dishes. Let’s get started:&nbsp;
-        <div className="text__summary">
-        In 30 seconds: eat my ass
-        </div>
+        When you take your first bite, try closing your eyes and listing the flavors that pop up in your mind. Is it salty, spicy, sweet, sour, bitter, or gamey? A combination? As you detect flavors, separate them into two categories: flavors that you like and work well together, and flavors you don’t like as much.<br/><br/>
+        Let’s say you’re eating a steak dish. Maybe you taste salt and pepper from the seasoning, MSG from the steak, and a mushroom flavor from the sauce. If you list and categorize these flavors, you can expand your cooking toolkit.<br/><br/>
+        Next, just like flavors, you want to identify textures. Close your eyes and feel the food. Is it crunchy, smooth, thick, soft, or chewy? Consider these textures the way you do the flavors.<br/><br/>
+        Once you are comfortable with flavor and texture, pay attention to balance. There is no magic ingredient that does everything. Your perfect steak, an A5 Wagyu, would get boring by itself. An average ribeye with roasted potatoes and creamed spinach, complimented by a glass of wine is much more interesting. Try to identify the different parts of each meal, and how they balance each other.<br/><br/>
+        The goal is to train your palette to identify good flavors and textures. The more dishes you taste intentionally, the more experience you will have to recreate, in your own dishes, the flavor and texture combinations you like.<br/><br/>
       </div>
     </>
   );

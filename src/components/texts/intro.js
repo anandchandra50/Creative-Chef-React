@@ -10,16 +10,13 @@ export default function Intro(props) {
 
         The structure of the guide is as follows:
         <ol className="text__list">
-          <li>Think about your palette, and how to taste food intentionally</li>
-          <li>Understand the fundamentals of what makes a great dish</li>
-          <li>Apply those fundamentals to create your own dishes</li>
-          <li>Examples that put it all together</li>
+          <li>Palette: how to taste food intentionally</li>
+          <li>Breakdown: the fundamentals of what makes a great dish</li>
+          <li>Composition: apply cooking fundamentals to create your own dishes</li>
+          <li>Examples: a flavor and texture cheat sheet that puts it all together</li>
         </ol>
         <br/>
-        We hope these sections will show you the open-endedness and limitless possibilities within food.
-        <br/><br/>
-
-        Lastly, practice is key. As mentioned before, food is an art, and like any other art, you won’t get good at it just by reading this guide. The more you practice thinking and cooking this way, the more confident you will become in making your own dishes. Let’s get started:&nbsp;
+        Like any other skill, practice is key. You won’t get good at cooking just by reading this guide. The more you practice thinking and cooking this way, the more confident you will become in making your own dishes. Let’s get started.
       </div>
     </>
   );
