@@ -3,7 +3,7 @@
   color: black;
   opacity: 0.75;
   font-family: 'Open Sans', sans-serif;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .text__summary {
@@ -20,7 +20,7 @@
 
 .text__header {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 32px;
   color: black;
 }
 

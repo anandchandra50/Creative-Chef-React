@@ -1,7 +1,7 @@
 body {
   font-family: 'Arimo', sans-serif;
   background-image: url('./images/background-3.png');
-  background-size: cover;
+  background-size: 100vw;
   overflow-y: scroll;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;  /* Internet Explorer 10+ */

@@ -8,6 +8,7 @@ import Composition from '../texts/composition.js';
 import Examples from '../texts/examples.js';
 import header from '../../images/header.svg';
 import { isMobile } from "react-device-detect";
+import logo from '../../images/large-logo.svg';
 
 
 class Page extends Component {
@@ -38,7 +39,9 @@ class Page extends Component {
   pageHeader(page) {
     switch (page) {
       case 'Home':
-        return <div className="text__header">Introduction</div>
+        return
+      case 'Palette':
+        return <div className="text__header mt-5">{page}</div>
       case 'Home Mobile':
         return <div className="text__header text__header-home">Introduction</div>
       default:
@@ -48,21 +51,29 @@ class Page extends Component {
 
   webRender() {
     const pages = ['Home', 'Palette', 'Breakdown', 'Composition', 'Examples'];
+    // <MenuWeb
+    //   selected={this.state.page}
+    //   menuNames={['Home', 'Palette', 'Breakdown', 'Composition', 'Examples']}
+    //   handleMenuChange={this.switchPage}
+    // />
     return (
       <div className="container">
-        <div className="header__title">Independent Chef</div>
-        {pages.map((page) => (
-          <>
-            {this.pageHeader(page)}
-            {this.pageBody(page)}
-          </>
-        ))}
-
-        <MenuWeb
-          selected={this.state.page}
-          menuNames={['Home', 'Palette', 'Breakdown', 'Composition', 'Examples']}
-          handleMenuChange={this.switchPage}
+        <img
+          className="logo"
+          src={logo}
+          alt="logo"
+          onClick={() => (this.switchPage('Palette'))}
         />
+        <div className="page-container">
+          {pages.map((page) => (
+            <>
+              {this.pageHeader(page)}
+              {this.pageBody(page)}
+            </>
+          ))}
+
+
+        </div>}
       </div>
     );
   }
