@@ -38,7 +38,7 @@ class Page extends Component {
   pageHeader(page) {
     switch (page) {
       case 'Home':
-        return <div className="text__header text__header-home">Independent Chef</div>
+        return <div className="text__header">Introduction</div>
       case 'Home Mobile':
         return <div className="text__header text__header-home">Introduction</div>
       default:
@@ -47,13 +47,16 @@ class Page extends Component {
   }
 
   webRender() {
-    const containerClass = (this.state.page === 'Home') ? 'text-container text-container-home' : 'text-container';
+    const pages = ['Home', 'Palette', 'Breakdown', 'Composition', 'Examples'];
     return (
-      <div>
-        <div className={containerClass}>
-          {this.pageHeader(this.state.page)}
-          {this.pageBody(this.state.page)}
-        </div>
+      <div className="container">
+        <div className="header__title">Independent Chef</div>
+        {pages.map((page) => (
+          <>
+            {this.pageHeader(page)}
+            {this.pageBody(page)}
+          </>
+        ))}
 
         <MenuWeb
           selected={this.state.page}

@@ -20,12 +20,6 @@ export default function Intro(props) {
         <br/><br/>
 
         Lastly, practice is key. As mentioned before, food is an art, and like any other art, you won’t get good at it just by reading this guide. The more you practice thinking and cooking this way, the more confident you will become in making your own dishes. Let’s get started:&nbsp;
-        <span
-          className="text__segue"
-          onClick={props.showNextPage}
-        >
-          Palette
-        </span>
       </div>
     </>
   );

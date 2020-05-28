@@ -1,9 +1,9 @@
 .text__body {
-  font-size: 18px;
+  font-size: 16px;
   color: black;
   opacity: 0.75;
   font-family: 'Open Sans', sans-serif;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 
 .text__summary {
@@ -15,16 +15,13 @@
   color: black;
   opacity: 0.5;
   font-weight: bold;
+  visibility: hidden;
 }
 
 .text__header {
   font-weight: bold;
-  font-size: 36px;
+  font-size: 24px;
   color: black;
-}
-
-.text__header-home {
-  font-size: 60px;
 }
 
 .text__segue {
@@ -40,7 +37,7 @@
   .text__body {
     font-size: 16px;
   }
-  
+
   .text__header {
     font-weight: bold;
     font-size: 24px;
