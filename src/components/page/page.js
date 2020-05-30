@@ -10,6 +10,7 @@ import header from '../../images/header.svg';
 import highlight from '../../images/highlight.svg';
 import { isMobile } from "react-device-detect";
 import logo from '../../images/left-logo.svg';
+import mobileLogo from '../../images/large-logo.svg';
 
 
 class Page extends Component {
@@ -83,9 +84,6 @@ class Page extends Component {
     const navigation = this.defineNavigation(this.state.page);
     const nextPage = navigation[0];
     const prevPage = navigation[1];
-    // const longPages = ['Breakdown', 'Composition'];
-    // const pageButtonClass = (longPages.includes(nextPage) || longPages.includes(prevPage)) ? 'page-button page-button-long' : 'page-button';
-    // console.log(pageButtonClass);
     return (
       <>
         {this.state.page === 'Home' &&
@@ -125,16 +123,18 @@ class Page extends Component {
   }
 
   mobileRender() {
-    const pages = ['Home', 'Palette', 'Breakdown', 'Composition', 'Examples'];
+    const pages = ['Intro', 'Palette', 'Breakdown', 'Composition', 'Examples'];
     return (
       <div className="container">
-        <div className="header">Independent Chef</div>
-        {pages.map((page) => (
-          <>
-            {this.pageHeader(page === 'Home' ? 'Home Mobile' : page)}
-            {this.pageBody(page)}
-          </>
-        ))}
+        <img className="logo-mobile" src={mobileLogo} alt="logo"/>
+        <div className="container-text">
+          {pages.map((page) => (
+            <>
+              {page !== 'Intro' && this.pageHeader(page)}
+              {this.pageBody(page)}
+            </>
+          ))}
+        </div>
       </div>
     );
   }

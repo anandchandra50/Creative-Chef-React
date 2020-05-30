@@ -6,27 +6,10 @@
   margin-bottom: 40px;
 }
 
-.text__summary {
-  position: fixed;
-  top: 40vh;
-  right: 30vw;
-  width: 15vw;
-  font-size: 16px;
-  color: black;
-  opacity: 0.5;
-  font-weight: bold;
-  visibility: hidden;
-}
-
 .text__header {
   font-weight: bold;
   font-size: 32px;
   color: black;
-}
-
-.text__segue {
-  text-decoration: underline;
-  cursor: pointer;
 }
 
 .text__list {

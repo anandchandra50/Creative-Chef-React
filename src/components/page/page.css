@@ -65,23 +65,26 @@
 }
 
 @media only screen and (max-width:600px) {
+  body {
+    overflow-x: hidden;
+  }
+
   .container {
     position: absolute;
-    left: 8vw;
-    width: 84vw;
-    top: 80vh;
+    left: 0;
+    width: 100vw;
     display: flex;
     flex-direction: column;
   }
 
-  .header {
-    font-weight: bold;
-    font-size: 30px;
-    color: black;
-    margin-bottom: 20vh;
-    background-image: url('../../images/highlight.png');
-    background-size: 90% 120%;
-    background-position: left -15px center;
-    background-repeat: no-repeat;
+  .container-text {
+    margin: 20px 8vw auto 8vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo-mobile {
+    margin: 40px 5px 5px 5px;
+    width: calc(100vw - 10px);
   }
 }
