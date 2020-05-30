@@ -11,15 +11,55 @@ import highlight from '../../images/highlight.svg';
 import { isMobile } from "react-device-detect";
 import logo from '../../images/left-logo.svg';
 import mobileLogo from '../../images/large-logo.svg';
+import posed from 'react-pose';
 
+const animationDuration = 300;
+const TextSlide = posed.div({
+  hidden: {
+    opacity: 0,
+    transition: { duration: animationDuration },
+  },
+  visible: {
+    opacity: 1,
+    transition: { duration: animationDuration },
+  },
+});
+
+const ImageSlide = posed.img({
+  hidden: {
+    opacity: 0,
+    transition: { duration: animationDuration },
+  },
+  visible: {
+    opacity: 1,
+    transition: { duration: animationDuration },
+  },
+});
 
 class Page extends Component {
   state = {
     page: 'Home',
+    isCurrentPageVisible: true,
   };
 
   switchPage = item => {
-    this.setState({page:item});
+    if (this.state.page === 'Home') {
+      this.setState({ isCurrentPageVisible: false });
+      this.timeout = setTimeout(() => {
+        this.setState({ page: item });
+      }, animationDuration);
+      this.timeout = setTimeout(() => {
+        window.scrollTo(0, 0);
+        this.setState({ isCurrentPageVisible: true });
+      }, animationDuration);
+    } else {
+      this.setState({ isCurrentPageVisible: false });
+      this.timeout = setTimeout(() => {
+        window.scrollTo(0, 0);
+        this.setState({ page: item, isCurrentPageVisible: true });
+      }, animationDuration);
+    }
+
   };
 
   defineNavigation = page => {
@@ -56,7 +96,7 @@ class Page extends Component {
   pageBody(page) {
     switch (page) {
       case 'Intro':
-        return <Intro/>;
+        return <Intro showExamples={() => console.log('Downloading')}/>;
       case 'Palette':
         return <Palette/>;
       case 'Breakdown':
@@ -73,6 +113,7 @@ class Page extends Component {
     switch (page) {
       case 'Home':
         return
+      case 'Intro':
       case 'Home Mobile':
         return <div className="text__header text__header-home">Introduction</div>
       default:
@@ -87,10 +128,11 @@ class Page extends Component {
     return (
       <>
         {this.state.page === 'Home' &&
-        <img
+        <ImageSlide
           className="logo noselect"
           src={logo}
           alt="logo"
+          pose={this.state.isCurrentPageVisible ? 'visible' : 'hidden'}
         />}
         {nextPage !== '' &&
         <div
@@ -110,14 +152,15 @@ class Page extends Component {
           <div className="page-button__element page-button__text noselect">PREV</div>
         </div>}
         {this.state.page !== 'Home' &&
-        <div className="container">
-
-
+        <TextSlide
+          className="container"
+          pose={this.state.isCurrentPageVisible ? 'visible' : 'hidden'}
+        >
           <div className="page-container">
               {this.pageHeader(this.state.page)}
               {this.pageBody(this.state.page)}
           </div>
-        </div>}
+        </TextSlide>}
       </>
     );
   }

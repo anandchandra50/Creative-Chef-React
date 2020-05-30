@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 100vw;
+  position: absolute;
   left: 0;
 }
 
@@ -23,6 +24,7 @@
   bottom: 50px;
   width: 100px;
   height: 30px;
+  z-index: 100;
 }
 
 .page-button-long {

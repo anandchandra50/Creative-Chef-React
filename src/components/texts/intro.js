@@ -5,10 +5,11 @@ export default function Intro(props) {
   return (
     <>
       <div className="text__body">
-        This is not a recipe book. This is not kitchen instruction. This is a guide to becoming an independent chef. I hope to offer a set of fundamentals and actionable steps to give you a deeper understanding of food. This should be read as a complete guide, but if you’re looking for the flavor cheatsheet, you’ll find it here.<br/><br/>
+        This is not a recipe book. This is not kitchen instruction. This is a guide to becoming an independent chef. I hope to offer a set of fundamentals and actionable steps to give you a deeper understanding of food. This should be read as a complete guide, but if you’re looking for the flavor cheatsheet, you’ll find it&nbsp;
+        <span className="underline pointer" onClick={props.showExamples}>here</span>.<br/><br/>
         Regardless of your skill level, I hope that by the end, you understand the fundamentals of dish composition, and gain the confidence that you can create your own dishes in the kitchen, independent from recipes.<br/><br/>
 
-        The structure of the guide is as follows:
+        The structure of the guide:
         <ol className="text__list">
           <li>Palette: how to taste food intentionally</li>
           <li>Breakdown: the fundamentals of what makes a great dish</li>

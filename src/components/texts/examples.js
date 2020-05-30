@@ -5,7 +5,7 @@ export default function Examples(props) {
   return (
     <>
       <div className="text__body">
-        Here’s a set of flavor combinations that I like. I hope that you now understand why each of these works. Feel free to use these and modify them however you’d like.<br/><br/>
+        Here’s a set of flavor combinations that I like. I hope that, armed with your knowledge, you now can explain why each of these works. Feel free to use these and experiment however you’d like.<br/><br/>
         <span className="bold">Meat Combinations</span><br/>
         Chopped beef and cooked onions (meat + sweet)<br/>
         Whole steak and peppercorn and salted butter (beef + spicy + salty)<br/>
