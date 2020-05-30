@@ -116,6 +116,12 @@ class Page extends Component {
       case 'Intro':
       case 'Home Mobile':
         return <div className="text__header text__header-home">Introduction</div>
+      case 'Breakdown':
+        return <div className="text__header">Dish Breakdown</div>
+      case 'Composition':
+        return <div className="text__header">Dish Construction</div>
+      case 'Examples':
+        return <div className="text__header">Cheatsheets</div>
       default:
         return <div className="text__header">{page}</div>
     }
@@ -144,7 +150,7 @@ class Page extends Component {
         </div>}
         {prevPage !== '' &&
         <div
-          className={nextPage === '' ? "page-button": "page-button page-button-prev"}
+          className="page-button page-button-prev"
           onClick={() => this.switchPage(prevPage)}
         >
 
