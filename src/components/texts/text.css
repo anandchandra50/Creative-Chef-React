@@ -13,7 +13,7 @@
 }
 
 .text__list {
-  margin-left: 40px;
+  margin-left: 32px;
 }
 
 .bold {
@@ -26,6 +26,10 @@
 
 .underline {
   text-decoration: underline;
+}
+
+.indent {
+  margin-left: 12px;
 }
 
 .pointer {

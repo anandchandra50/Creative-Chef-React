@@ -6,11 +6,9 @@ import Palette from '../texts/palette.js';
 import Breakdown from '../texts/breakdown.js';
 import Composition from '../texts/composition.js';
 import Examples from '../texts/examples.js';
-import header from '../../images/header.svg';
-import highlight from '../../images/highlight.svg';
 import { isMobile } from "react-device-detect";
-import logo from '../../images/left-logo.svg';
-import mobileLogo from '../../images/large-logo.svg';
+import logo from '../../images/logo.svg';
+import mobileLogo from '../../images/mobile-logo.svg';
 import posed from 'react-pose';
 
 const animationDuration = 300;
@@ -117,11 +115,11 @@ class Page extends Component {
       case 'Home Mobile':
         return <div className="text__header text__header-home">Introduction</div>
       case 'Breakdown':
-        return <div className="text__header">Dish Breakdown</div>
+        return <div className="text__header">Analyzing Dishes</div>
       case 'Composition':
-        return <div className="text__header">Dish Construction</div>
+        return <div className="text__header">Creating a Dish</div>
       case 'Examples':
-        return <div className="text__header">Cheatsheets</div>
+        return <div className="text__header">Cheatsheets and Closing</div>
       default:
         return <div className="text__header">{page}</div>
     }
@@ -145,7 +143,6 @@ class Page extends Component {
           className="page-button page-button-next"
           onClick={() => this.switchPage(nextPage)}
         >
-          <img className="page-button__element page-button__image" src={highlight} alt="highlight"/>
           <div className="page-button__element page-button__text noselect">{this.state.page === 'Home' ? 'Intro' : 'Next'}</div>
         </div>}
         {prevPage !== '' &&
@@ -153,8 +150,6 @@ class Page extends Component {
           className="page-button page-button-prev"
           onClick={() => this.switchPage(prevPage)}
         >
-
-          <img className="page-button__element page-button__image" src={highlight} alt="highlight"/>
           <div className="page-button__element page-button__text noselect">PREV</div>
         </div>}
         {this.state.page !== 'Home' &&

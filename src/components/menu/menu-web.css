@@ -20,7 +20,6 @@
 
 .menu-web__item-selected {
   opacity: 1;
-  background-image: url('../../images/highlight.png');
   background-size: 80% 120%;
   background-position: left -15px center;
   background-repeat: no-repeat;

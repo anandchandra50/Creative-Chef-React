@@ -1,5 +1,6 @@
 import React from 'react';
-import './text.css'
+import './text.css';
+import Checklist from './checklist.js';
 
 // <span className="italic">Regarding balance: it’s ok to duplicate flavors and textures across different ingredients, but be careful of situations in which everything tastes or feels the same. For example, pasta with a soft meat sauce works, but a puree on top of a risotto doesn’t.</span><br/><br/>
 // <span className="italic">This chapter is a small step up from the previous two. The more experience you have cooking, the easier you will follow along. I believe the content is rewarding, but if it is too abstract, feel free to move on to the cheatsheets.</span><br/>
@@ -7,10 +8,47 @@ export default function Composition(props) {
   return (
     <>
       <div className="text__body">
-
-        In this chapter, I'll illustrate my thought process in creating dishes.<br/><br/>
-        <span className="bold">Making a dish boils down to two sets of choices: ingredient selection and cooking method.</span> Whether you have fifteen or fifty ingredients at hand, you can almost always pick out the right ingredients and cooking method to make a great dish.<br/><br/>
-        Let's run through a hypothetical scenarios.<br/><br/>
+        In this chapter, we will illustratrate our thought process in creating dishes.<br/><br/>
+        <span className="bold">The Independent Chef's Checklist:</span><br/>
+        <Checklist/><br/>
+        As you can see, we design our dishes around the elements we discussed. Let's run through a few hypothetical examples.<br/><br/>
+        <span className="bold">Ingredients on hand: </span>steak, vegetables, starches<br/>
+        We will take these ingredients in a few different directions to create different dishes. In each of these dishes, the key ingredient is the steak. Before we start, we should notice a few things about steak: it’s hearty and rich in flavor.<br/><br/>
+        <span className="bold">Asian Stir-Fry</span><br/>
+        <Checklist
+          flavors="salty, Asian"
+          textures="crunchy, chewy"
+          keyIngredient="steak"
+          supportingIngredients="broccoli"
+          sauce="soy sauce, salt & pepper, garlic, ginger"
+          methods="stir-fry all ingredients"
+        />
+        <span className="bold italic">Explanation</span><br/>
+        Broccoli balances the chewy texture with crunch and lightens the heartiness of the steak, the sauce satisfies our desired flavor profile, and stir-frying them incorporates the ingredients together.<br/><br/>
+        <span className="bold">American Steak</span><br/>
+        <Checklist
+          flavors="salty, meaty, buttery, sweet"
+          textures="creamy, chewy"
+          keyIngredient="steak"
+          supportingIngredients="asparagus, mashed potatoes"
+          sauce="butter, onions"
+          methods="pan-sear steak, boil the potatoes and asparagus"
+        />
+        <span className="bold italic">Explanation</span><br/>
+        This dish is meant to be filling, so we complement the steak with creamy potatoes. The sauce brings out the flavor of the steak and improves the potatoes. This time, we pan-sear the steak to create a crust, and boil the other ingredients so they are soft in contrast.<br/><br/>
+        <span className="bold">Beef Stroganoff</span><br/>
+        <Checklist
+          flavors="salty, meaty, mushroom, stroganoff"
+          textures="creamy, deep, filling"
+          keyIngredient="steak"
+          supportingIngredients="egg noodles"
+          sauce="mushrooms, butter, cream"
+          methods="separately pan-fry cut steak and mushrooms, boil noodles"
+        />
+        <span className="bold italic">Explanation</span><br/>
+        This dish is weighty, so we pair the steak with creamy mushrooms and sauce, and lighter noodles. Unlike the stir-fry, we cook the steak and mushrooms separately to create a contrast: crisp steak, and soft mushrooms.<br/><br/>
+        Here’s the takeaway: none of these dishes are particularly innovative, but we are able to design them from the ground up by thinking about the fundamentals: flavor, texture, ingredients, sauce, and cooking methods.<br/><br/>
+        <span className="italic">Note: flavors and textures are often heavily influenced by your options (your ingredients at hand), and that is ok.</span><br/>
 
       </div>
     </>
