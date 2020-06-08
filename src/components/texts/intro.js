@@ -17,7 +17,7 @@ export default function Intro(props) {
           <li>Cheatsheets and Closing</li>
         </ol>
         <br/>
-        Like any other skill, practice is key. You won’t get good at cooking just by reading this guide. Let’s get started.
+        Let’s get started.
       </div>
     </>
   );

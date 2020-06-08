@@ -12,6 +12,7 @@ export default function Checklist(props) {
       {props.supportingIngredients ? <>Supporting Ingredients: <span className="italic">{props.supportingIngredients}</span></> : <>Supporting Ingredients</>}<br/>
       {props.sauce ? <>Sauce: <span className="italic">{props.sauce}</span></> : <>Sauce</>}<br/>
       {props.methods ? <>Cooking Methods: <span className="italic">{props.methods}</span></> : <>Cooking Methods</>}<br/>
+      {props.presentation ? <>Presentation: <span className="italic">{props.presentation}</span></> : <>Presentation</>}<br/>
     </>
   );
 

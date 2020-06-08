@@ -12,8 +12,8 @@ export default function Composition(props) {
         <span className="bold">The Independent Chef's Checklist:</span><br/>
         <Checklist/><br/>
         As you can see, we design our dishes around the elements we discussed. Let's run through a few hypothetical examples.<br/><br/>
-        <span className="bold">Ingredients on hand: </span>steak, vegetables, starches<br/>
-        We will take these ingredients in a few different directions to create different dishes. In each of these dishes, the key ingredient is the steak. Before we start, we should notice a few things about steak: it’s hearty and rich in flavor.<br/><br/>
+        <span className="bold">Ingredients on hand: steak, vegetables, starches</span><br/>
+        We will take these ingredients in different directions to create different dishes, using steak as the key ingredient. Before we start, we should notice a few things about steak: it’s hearty and rich in flavor.<br/><br/>
         <span className="bold">Asian Stir-Fry</span><br/>
         <Checklist
           flavors="salty, Asian"
@@ -22,6 +22,7 @@ export default function Composition(props) {
           supportingIngredients="broccoli"
           sauce="soy sauce, salt & pepper, garlic, ginger"
           methods="stir-fry all ingredients"
+          presentation="serve with rice, top with sesame seeds"
         />
         <span className="bold italic">Explanation</span><br/>
         Broccoli balances the chewy texture with crunch and lightens the heartiness of the steak, the sauce satisfies our desired flavor profile, and stir-frying them incorporates the ingredients together.<br/><br/>
@@ -33,23 +34,11 @@ export default function Composition(props) {
           supportingIngredients="asparagus, mashed potatoes"
           sauce="butter, onions"
           methods="pan-sear steak, boil the potatoes and asparagus"
+          presentation="finish with melted garlic butter "
         />
         <span className="bold italic">Explanation</span><br/>
         This dish is meant to be filling, so we complement the steak with creamy potatoes. The sauce brings out the flavor of the steak and improves the potatoes. This time, we pan-sear the steak to create a crust, and boil the other ingredients so they are soft in contrast.<br/><br/>
-        <span className="bold">Beef Stroganoff</span><br/>
-        <Checklist
-          flavors="salty, meaty, mushroom, stroganoff"
-          textures="creamy, deep, filling"
-          keyIngredient="steak"
-          supportingIngredients="egg noodles"
-          sauce="mushrooms, butter, cream"
-          methods="separately pan-fry cut steak and mushrooms, boil noodles"
-        />
-        <span className="bold italic">Explanation</span><br/>
-        This dish is weighty, so we pair the steak with creamy mushrooms and sauce, and lighter noodles. Unlike the stir-fry, we cook the steak and mushrooms separately to create a contrast: crisp steak, and soft mushrooms.<br/><br/>
-        Here’s the takeaway: none of these dishes are particularly innovative, but we are able to design them from the ground up by thinking about the fundamentals: flavor, texture, ingredients, sauce, and cooking methods.<br/><br/>
-        <span className="italic">Note: flavors and textures are often heavily influenced by your options (your ingredients at hand), and that is ok.</span><br/>
-
+        <span className="bold">Here’s the takeaway:</span> neither of these dishes are particularly innovative, but we are able to design them from the ground up by thinking about the fundamentals: flavor, texture, ingredients, sauce, cooking methods, and presentation.<br/><br/>
       </div>
     </>
   );
