@@ -1,16 +1,29 @@
 .menu-web {
   position: fixed;
   top: 35vh;
-  right: 10vw;
+  left: 85vw;
   height: 20vh;
   text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  z-index: 1;
+}
+
+.menu-web__description {
+  position: fixed;
+  top: 30vh;
+  left: 85vw;
+  height: 5vh;
+  text-align: left;
+  font-size: 12px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  visibility: hidden;
 }
 
 .menu-web__item {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
   color: black;
   opacity: 1;
@@ -20,11 +33,35 @@
 
 .menu-web__item-selected {
   opacity: 1;
-  background-size: 80% 120%;
   background-position: left -15px center;
   background-repeat: no-repeat;
+  background-image: url('../../images/highlight.svg');
 }
 
-.menu-web__item-selected-long {
-  background-size: 150% 120%;
+.menu-web__item-selected-Home {
+  background-size: 65px 100px;
+}
+
+.menu-web__item-selected-Intro {
+  background-size: 120px 100px;
+}
+
+.menu-web__item-selected-Palette {
+  background-size: 80px 100px;
+}
+
+.menu-web__item-selected-Breakdown {
+  background-size: 160px 100px;
+}
+
+.menu-web__item-selected-Composition {
+  background-size: 135px 100px;
+}
+
+.menu-web__item-selected-Examples {
+  background-size: 120px 100px;
+}
+
+.menu-web__item-selected-Closing {
+  background-size: 80px 100px;
 }

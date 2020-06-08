@@ -7,18 +7,17 @@ export default class MenuWeb extends Component {
   }
 
   render() {
-    const shortMenus = ['Home', 'Intro', 'Palette'];
-
-    const selectedClass = shortMenus.includes(this.props.selected) ? 'menu-web__item menu-web__item-selected' : 'menu-web__item menu-web__item-selected menu-web__item-selected-long';
+    const selectedClass = 'menu-web__item menu-web__item-selected menu-web__item-selected-' + this.props.selected;
     const unselectedClass = 'menu-web__item';
     return (
       <>
+        <div className="menu-web__description">Read through in order</div>
         <div className="menu-web">
-          {this.props.menuNames.map((item) =>
+          {this.props.menuNames.map((item, index) =>
             <div
               key={item}
-              className={item === this.props.selected ? selectedClass : unselectedClass}
-              onClick={() => this.handleMenuChange(item)}
+              className={this.props.menuItems[index] === this.props.selected ? selectedClass : unselectedClass}
+              onClick={() => this.handleMenuChange(this.props.menuItems[index])}
             >
               &nbsp;{item}&nbsp;
             </div>

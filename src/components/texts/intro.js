@@ -14,7 +14,8 @@ export default function Intro(props) {
           <li>Palette</li>
           <li>Analyzing Dishes</li>
           <li>Creating a Dish</li>
-          <li>Cheatsheets and Closing</li>
+          <li>Cheatsheets</li>
+          <li>Closing</li>
         </ol>
         <br/>
         Let’s get started.

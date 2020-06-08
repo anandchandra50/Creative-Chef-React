@@ -6,6 +6,7 @@ import Palette from '../texts/palette.js';
 import Breakdown from '../texts/breakdown.js';
 import Composition from '../texts/composition.js';
 import Examples from '../texts/examples.js';
+import Closing from '../texts/closing.js';
 import { isMobile } from "react-device-detect";
 import logo from '../../images/logo.svg';
 import mobileLogo from '../../images/mobile-logo.svg';
@@ -103,6 +104,8 @@ class Page extends Component {
         return <Composition/>;
       case 'Examples':
         return <Examples/>;
+      case 'Closing':
+        return <Closing/>;
       default: break;
     }
   }
@@ -119,16 +122,13 @@ class Page extends Component {
       case 'Composition':
         return <div className="text__header">Creating a Dish</div>
       case 'Examples':
-        return <div className="text__header">Cheatsheets and Closing</div>
+        return <div className="text__header">Cheatsheets</div>
       default:
         return <div className="text__header">{page}</div>
     }
   }
 
   webRender() {
-    const navigation = this.defineNavigation(this.state.page);
-    const nextPage = navigation[0];
-    const prevPage = navigation[1];
     return (
       <>
         {this.state.page === 'Home' &&
@@ -138,20 +138,12 @@ class Page extends Component {
           alt="logo"
           pose={this.state.isCurrentPageVisible ? 'visible' : 'hidden'}
         />}
-        {nextPage !== '' &&
-        <div
-          className="page-button page-button-next"
-          onClick={() => this.switchPage(nextPage)}
-        >
-          <div className="page-button__element page-button__text noselect">{this.state.page === 'Home' ? 'Intro' : 'Next'}</div>
-        </div>}
-        {prevPage !== '' &&
-        <div
-          className="page-button page-button-prev"
-          onClick={() => this.switchPage(prevPage)}
-        >
-          <div className="page-button__element page-button__text noselect">PREV</div>
-        </div>}
+        <MenuWeb
+          selected={this.state.page}
+          menuItems={['Home', 'Intro', 'Palette', 'Breakdown', 'Composition', 'Examples', 'Closing']}
+          menuNames={['Home', 'Introduction', 'Palette', 'Analyzing Dishes', 'Creating a Dish', 'Cheatsheets', 'Closing']}
+          handleMenuChange={this.switchPage}
+        />
         {this.state.page !== 'Home' &&
         <TextSlide
           className="container"
@@ -167,7 +159,7 @@ class Page extends Component {
   }
 
   mobileRender() {
-    const pages = ['Intro', 'Palette', 'Breakdown', 'Composition', 'Examples'];
+    const pages = ['Intro', 'Palette', 'Breakdown', 'Composition', 'Examples', 'Closing'];
     return (
       <div className="container">
         <img className="logo-mobile" src={mobileLogo} alt="logo"/>

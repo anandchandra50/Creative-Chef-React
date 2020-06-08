@@ -13,9 +13,12 @@
 
 .logo {
   position: absolute;
-  bottom: 5vh;
+  /* bottom: 5vh;
   left: 5vw;
-  width: 33vw;
+  width: 33vw; */
+  bottom: 15vh;
+  left: 10vw;
+  width: 25vw;
 }
 
 .page-button {
