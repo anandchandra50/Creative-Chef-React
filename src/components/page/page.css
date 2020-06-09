@@ -93,7 +93,28 @@
   }
 
   .logo-mobile {
-    margin: 40px 5px 5px 5px;
-    width: calc(100vw - 10px);
+    position: absolute;
+    left: 10vw;
+    top: 80vh;
+    width: calc(80vw);
+  }
+
+  .menu-mobile {
+    position: absolute;
+    left: 10vw;
+    top: 70vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50vw;
+  }
+
+  .menu-mobile__item {
+    font-size: 12px;
+    /* font-weight: bold; */
+    color: black;
+    opacity: 1;
+    text-transform: uppercase;
+    text-decoration: underline;
   }
 }

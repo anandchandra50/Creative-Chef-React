@@ -11,6 +11,7 @@ import { isMobile } from "react-device-detect";
 import logo from '../../images/logo.svg';
 import mobileLogo from '../../images/mobile-logo.svg';
 import posed from 'react-pose';
+import { Link } from "react-router-dom";
 
 const animationDuration = 300;
 const TextSlide = posed.div({
@@ -95,7 +96,8 @@ class Page extends Component {
   pageBody(page) {
     switch (page) {
       case 'Intro':
-        return <Intro showExamples={() => console.log('Downloading')}/>;
+      case 'Intro Mobile':
+        return <Intro/>;
       case 'Palette':
         return <Palette/>;
       case 'Breakdown':
@@ -115,14 +117,17 @@ class Page extends Component {
       case 'Home':
         return
       case 'Intro':
-      case 'Home Mobile':
-        return <div className="text__header text__header-home">Introduction</div>
+        return <div className="text__header">Introduction</div>
+      case 'Intro Mobile':
+        return <div className="text__header mt-5">Introduction</div>
       case 'Breakdown':
         return <div className="text__header">Analyzing Dishes</div>
       case 'Composition':
         return <div className="text__header">Creating a Dish</div>
       case 'Examples':
         return <div className="text__header">Cheatsheets</div>
+      case 'Examples Mobile':
+        return <div className="text__header mt-5">Cheatsheets</div>
       default:
         return <div className="text__header">{page}</div>
     }
@@ -159,20 +164,46 @@ class Page extends Component {
   }
 
   mobileRender() {
-    const pages = ['Intro', 'Palette', 'Breakdown', 'Composition', 'Examples', 'Closing'];
-    return (
-      <div className="container">
-        <img className="logo-mobile" src={mobileLogo} alt="logo"/>
-        <div className="container-text">
-          {pages.map((page) => (
-            <>
-              {page !== 'Intro' && this.pageHeader(page)}
-              {this.pageBody(page)}
-            </>
-          ))}
-        </div>
-      </div>
-    );
+    const pages = ['Intro Mobile', 'Palette', 'Breakdown', 'Composition', 'Examples', 'Closing'];
+    console.log(this.props.mobilePage);
+    switch (this.props.mobilePage) {
+      case 'Home':
+        return (
+          <div className="container">
+            <img className="logo-mobile" src={mobileLogo} alt="logo"/>
+            <div className="menu-mobile">
+              <Link to="/guide" className="menu-mobile__item">Guide</Link>
+              <Link to="/cheatsheets" className="menu-mobile__item">Cheatsheets</Link>
+            </div>
+          </div>
+        );
+      case 'Guide':
+        return (
+          <div className="container">
+            <div className="container-text">
+              {pages.map((page) => (
+                <>
+                  {this.pageHeader(page)}
+                  {this.pageBody(page)}
+                </>
+              ))}
+            </div>
+          </div>
+        );
+      case 'Cheatsheet':
+        return (
+          <>
+            <div className="container">
+              <div className="container-text">
+                {this.pageHeader('Examples Mobile')}
+                {this.pageBody('Examples')}
+              </div>
+            </div>
+
+          </>
+        );
+      default: return;
+    }
   }
 
   render() {
