@@ -1,6 +1,6 @@
 import React from 'react';
 import './text.css';
-import BreakdownImage from '../../images/dish-analysis.png';
+import BreakdownImage from '../../images/dish-analysis.svg';
 
 export default function Breakdown(props) {
   return (
@@ -23,7 +23,7 @@ export default function Breakdown(props) {
         <span className="bold">The cooking methods bring all components together.</span> Like the other elements, cooking methods are intentionally chosen: searing a fish filet develops a crusted exterior, whereas steaming it creates a smooth bite.<br/><br/>
         Presentation is the finishing touch: the layering, garnish, and colors. It’s serving curry over rice, sprinkling parsley and grated cheese over pasta, and drizzling white heavy cream over red tomato soup. Each of these additions improve the visual appeal: <span className="bold">presentation transforms food into art.</span><br/><br/>
         <span className="bold">Visualize</span><br/><br/>
-        <img className="image" src={BreakdownImage} alt="Breakdown"/>
+        <img className="img-breakdown" src={BreakdownImage} alt="Breakdown"/>
       </div>
     </>
   );

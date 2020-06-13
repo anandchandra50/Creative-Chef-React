@@ -1,7 +1,7 @@
 .text__body {
   font-size: 16px;
-  color: black;
-  opacity: 0.75;
+  color: rgb(0, 0, 0, 0.75);
+  /* opacity: 0.75; */
   font-family: 'Open Sans', sans-serif;
   margin-bottom: 40px;
   line-height: 24px;
@@ -53,9 +53,10 @@
   border-radius: 4px;
 }
 
-.image {
+.img-breakdown {
   width: 75%;
   z-index: 1;
+  opacity: 1;
 }
 
 @media only screen and (max-width:600px) {
@@ -71,5 +72,9 @@
 
   .text__summary {
     visibility: hidden;
+  }
+
+  .img-breakdown {
+    width: 100%;
   }
 }
