@@ -1,9 +1,8 @@
 import React from 'react';
 import './text.css';
 import Checklist from './checklist.js';
+import { isMobile } from "react-device-detect";
 
-// <span className="italic">Regarding balance: it’s ok to duplicate flavors and textures across different ingredients, but be careful of situations in which everything tastes or feels the same. For example, pasta with a soft meat sauce works, but a puree on top of a risotto doesn’t.</span><br/><br/>
-// <span className="italic">This chapter is a small step up from the previous two. The more experience you have cooking, the easier you will follow along. I believe the content is rewarding, but if it is too abstract, feel free to move on to the cheatsheets.</span><br/>
 export default function Composition(props) {
   return (
     <>
@@ -15,7 +14,7 @@ export default function Composition(props) {
         To help you remember this checklist, <span className="bold">we created a memory device: <br/>Keep Sorting Spices Methodically & Precisely</span><br/>
         (Key Supporting Sauces Method Presentation)<br/><br/>
         Let's use this checklist in two hypothetical dishes. For simplicity, let's stick with steak.<br/><br/>
-        <span className="italic">Note: hover for explanations.</span><br/><br/>
+        <span className="italic">{isMobile ? "Note: tap for explanations" : "Note: hover for explanations."}</span><br/><br/>
         <span className="bold">Asian Stir-Fry</span><br/>
         <Checklist
           checklist="asian"

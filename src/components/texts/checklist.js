@@ -1,26 +1,14 @@
 import React from 'react';
 import './text.css';
 import ReactTooltip from "react-tooltip";
+import { isMobile } from "react-device-detect";
 
 export default function Checklist(props) {
-  // function renderItems(items) {
-  //   return (
-  //     <>
-  //       {items.map((item) => (
-  //         <>
-  //           <span className={item in props.tooltips && "tooltip-text"} data-tip data-for={item}>{item}</span>
-  //           {item in props.tooltips && <ReactTooltip id={item}>{props.tooltips[item]}</ReactTooltip>}
-  //         </>
-  //       ))}
-  //     </>
-  //   );
-  // }
-
   function renderTooltip(checklist, tooltips) {
     return (
       <ReactTooltip
         id={props.checklist}
-        place="right"
+        place={isMobile ? "bottom" : "right"}
         effect="solid"
       >
         <span className="bold">Why we used:</span><br/>
