@@ -7,6 +7,7 @@ export default function Checklist(props) {
   function renderTooltip(checklist, tooltips) {
     return (
       <ReactTooltip
+        className="checklist-tooltip"
         id={props.checklist}
         place={isMobile ? "bottom" : "right"}
         effect="solid"

@@ -96,4 +96,8 @@
   .checklist {
     width: auto;
   }
+
+  .checklist-tooltip {
+    width: 84vw;
+  }
 }
