@@ -54,9 +54,11 @@
 }
 
 .img-breakdown {
-  width: 75%;
+  width: auto;
   z-index: 1;
   opacity: 1;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
 }
 
 .tooltip-text {

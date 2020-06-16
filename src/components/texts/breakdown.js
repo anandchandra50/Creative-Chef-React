@@ -1,6 +1,7 @@
 import React from 'react';
 import './text.css';
-import BreakdownImage from '../../images/dish-analysis.svg';
+// import BreakdownImage from '../../images/dish-analysis.svg';
+import BreakdownImage from '../../images/burger-deconstructed.svg';
 
 export default function Breakdown(props) {
   return (
