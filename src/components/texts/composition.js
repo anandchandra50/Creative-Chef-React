@@ -11,33 +11,51 @@ export default function Composition(props) {
         In this chapter, we will illustratrate our thought process in creating dishes.<br/><br/>
         <span className="bold">The Independent Chef's Checklist:</span><br/>
         <Checklist/><br/>
-        As you can see, we design our dishes around the elements we discussed. Let's run through a few hypothetical examples.<br/><br/>
-        <span className="bold">Ingredients on hand: steak, vegetables, starches</span><br/>
-        We will take these ingredients in different directions to create different dishes, using steak as the key ingredient. Before we start, we should notice a few things about steak: it’s hearty and rich in flavor.<br/><br/>
+        <span className="bold">The idea: define the flavor and texture goals, and select elements to create those results.</span><br/><br/>
+        To help you remember this checklist, <span className="bold">we created a memory device: <br/>Keep Sorting Spices Methodically & Precisely</span><br/>
+        (Key Supporting Sauces Method Presentation)<br/><br/>
+        Let's use this checklist in two hypothetical dishes. For simplicity, let's stick with steak.<br/><br/>
+        <span className="italic">Note: hover for explanations.</span><br/><br/>
         <span className="bold">Asian Stir-Fry</span><br/>
         <Checklist
           flavors="salty, Asian"
           textures="crunchy, chewy"
           keyIngredient="steak"
-          supportingIngredients="broccoli"
-          sauce="soy sauce, salt & pepper, garlic, ginger"
-          methods="stir-fry all ingredients"
-          presentation="serve with rice, top with sesame seeds"
+          supportingIngredients={["broccoli"]}
+          sauce={["soy sauce, ", "salt & pepper, ", "garlic, ", "ginger"]}
+          methods={["stir-fry ", "all ingredients"]}
+          presentation={["serve with rice, ", "top with sesame seeds"]}
+          tooltips={{
+            "broccoli": "Broccoli: crunchy texture for balance",
+            "soy sauce, ": "Soy Sauce: saltiness enhances steak umami flavor",
+            "ginger": "Ginger: a unique spice flavor that gives more depth",
+            "garlic, ": "Garlic: compliments the broccoli well and adds to the depth",
+            "stir-fry ": "Stir-fry: makes for a quick and easy meal, and allows the sauce to get familiar with the ingredients",
+            "serve with rice, ": "Rice: adds starch and creates a color contrast",
+            "top with sesame seeds": "Sesame Seeds: garnish",
+          }}
         />
-        <span className="bold italic">Explanation</span><br/>
-        Broccoli balances the chewy texture with crunch and lightens the heartiness of the steak, the sauce satisfies our desired flavor profile, and stir-frying them incorporates the ingredients together.<br/><br/>
+        <br/>
         <span className="bold">American Steak</span><br/>
         <Checklist
           flavors="salty, meaty, buttery, sweet"
           textures="creamy, chewy"
           keyIngredient="steak"
-          supportingIngredients="asparagus, mashed potatoes"
-          sauce="butter, onions"
-          methods="pan-sear steak, boil the potatoes and asparagus"
-          presentation="finish with melted garlic butter "
+          supportingIngredients={["asparagus, ", "mashed potatoes"]}
+          sauce={["butter, ", "onions"]}
+          methods={["pan-sear steak, ", "boil the potatoes and asparagus"]}
+          presentation={["finish with melted ", "garlic butter"]}
+          tooltips={{
+            "asparagus, ": "Asparagus: fresh vegetable flavor to balance the weight of steak",
+            "mashed potatoes": "Mashed Potatoes: compliments crunch of asparagus, and adds rich texture",
+            "butter, ": "Butter: serves as a catalyst for the sauce, and adds creamy texture",
+            "onions": "Onions: sweet flavor balances umami (meat) flavor from meat, and cream flavor from potatoes",
+            "pan-sear steak, ": "Pan-Sear: creates a crust",
+            "boil the potatoes and asparagus": "Boil: vegetables to create a softer texture and increase contrast with steak",
+            "garlic butter": "Garlic Butter: color contrast"
+          }}
         />
-        <span className="bold italic">Explanation</span><br/>
-        This dish is meant to be filling, so we complement the steak with creamy potatoes. The sauce brings out the flavor of the steak and improves the potatoes. This time, we pan-sear the steak to create a crust, and boil the other ingredients so they are soft in contrast.<br/><br/>
+        <br/>
         <span className="bold">Here’s the takeaway:</span> neither of these dishes are particularly innovative, but we are able to design them from the ground up by thinking about the fundamentals: flavor, texture, ingredients, sauce, cooking methods, and presentation.<br/><br/>
       </div>
     </>
