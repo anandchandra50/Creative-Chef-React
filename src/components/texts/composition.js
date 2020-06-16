@@ -18,6 +18,7 @@ export default function Composition(props) {
         <span className="italic">Note: hover for explanations.</span><br/><br/>
         <span className="bold">Asian Stir-Fry</span><br/>
         <Checklist
+          checklist="asian"
           flavors="salty, Asian"
           textures="crunchy, chewy"
           keyIngredient="steak"
@@ -25,19 +26,20 @@ export default function Composition(props) {
           sauce={["soy sauce, ", "salt & pepper, ", "garlic, ", "ginger"]}
           methods={["stir-fry ", "all ingredients"]}
           presentation={["serve with rice, ", "top with sesame seeds"]}
-          tooltips={{
-            "broccoli": "Broccoli: crunchy texture for balance",
-            "soy sauce, ": "Soy Sauce: saltiness enhances steak umami flavor",
-            "ginger": "Ginger: a unique spice flavor that gives more depth",
-            "garlic, ": "Garlic: compliments the broccoli well and adds to the depth",
-            "stir-fry ": "Stir-fry: makes for a quick and easy meal, and allows the sauce to get familiar with the ingredients",
-            "serve with rice, ": "Rice: adds starch and creates a color contrast",
-            "top with sesame seeds": "Sesame Seeds: garnish",
-          }}
+          tooltips={[
+            "Broccoli: crunchy texture for balance",
+            "Soy Sauce: saltiness enhances steak umami flavor",
+            "Ginger: a unique spice flavor that gives more depth",
+            "Garlic: compliments the broccoli well and adds to the depth",
+            "Stir-fry: makes for a quick and easy meal, and allows the sauce to get familiar with the ingredients",
+            "Rice: adds starch and creates a color contrast",
+            "Sesame Seeds: garnish",
+          ]}
         />
         <br/>
         <span className="bold">American Steak</span><br/>
         <Checklist
+          checklist="american"
           flavors="salty, meaty, buttery, sweet"
           textures="creamy, chewy"
           keyIngredient="steak"
@@ -45,15 +47,15 @@ export default function Composition(props) {
           sauce={["butter, ", "onions"]}
           methods={["pan-sear steak, ", "boil the potatoes and asparagus"]}
           presentation={["finish with melted ", "garlic butter"]}
-          tooltips={{
-            "asparagus, ": "Asparagus: fresh vegetable flavor to balance the weight of steak",
-            "mashed potatoes": "Mashed Potatoes: compliments crunch of asparagus, and adds rich texture",
-            "butter, ": "Butter: serves as a catalyst for the sauce, and adds creamy texture",
-            "onions": "Onions: sweet flavor balances umami (meat) flavor from meat, and cream flavor from potatoes",
-            "pan-sear steak, ": "Pan-Sear: creates a crust",
-            "boil the potatoes and asparagus": "Boil: vegetables to create a softer texture and increase contrast with steak",
-            "garlic butter": "Garlic Butter: color contrast"
-          }}
+          tooltips={[
+            "Asparagus: fresh vegetable flavor to balance the weight of steak",
+            "Mashed Potatoes: compliments crunch of asparagus, and adds rich texture",
+            "Butter: serves as a catalyst for the sauce, and adds creamy texture",
+            "Onions: sweet flavor balances umami (meat) flavor from meat, and cream flavor from potatoes",
+            "Pan-Sear: creates a crust",
+            "Boil: vegetables to create a softer texture and increase contrast with steak",
+            "Garlic Butter: color contrast",
+          ]}
         />
         <br/>
         <span className="bold">Here’s the takeaway:</span> neither of these dishes are particularly innovative, but we are able to design them from the ground up by thinking about the fundamentals: flavor, texture, ingredients, sauce, cooking methods, and presentation.<br/><br/>

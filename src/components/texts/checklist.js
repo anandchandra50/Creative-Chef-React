@@ -3,31 +3,50 @@ import './text.css';
 import ReactTooltip from "react-tooltip";
 
 export default function Checklist(props) {
-  function renderItems(items) {
+  // function renderItems(items) {
+  //   return (
+  //     <>
+  //       {items.map((item) => (
+  //         <>
+  //           <span className={item in props.tooltips && "tooltip-text"} data-tip data-for={item}>{item}</span>
+  //           {item in props.tooltips && <ReactTooltip id={item}>{props.tooltips[item]}</ReactTooltip>}
+  //         </>
+  //       ))}
+  //     </>
+  //   );
+  // }
+
+  function renderTooltip(checklist, tooltips) {
     return (
-      <>
-        {items.map((item) => (
+      <ReactTooltip
+        id={props.checklist}
+        place="right"
+        effect="solid"
+      >
+        <span className="bold">Why we used:</span><br/>
+        {tooltips.map((item) => (
           <>
-            <span className={item in props.tooltips && "tooltip-text"} data-tip data-for={item}>{item}</span>
-            {item in props.tooltips && <ReactTooltip id={item}>{props.tooltips[item]}</ReactTooltip>}
+            {item}<br/>
           </>
         ))}
-      </>
+      </ReactTooltip>
     );
   }
 
   return (
     <>
-      <span className="bold italic">Goals</span><br/>
-      {props.flavors ? <>Flavors: <span className="italic">{props.flavors}</span></> : <>Flavors</>}<br/>
-      {props.textures ? <>Textures: <span className="italic">{props.textures}</span></> : <>Textures</>}<br/>
-      <span className="bold italic">Implementation</span><br/>
-      {props.keyIngredient ? <>Key Ingredients: <span className="italic">{props.keyIngredient}</span></> : <>Key Ingredients</>}<br/>
-
-      {props.supportingIngredients ? <>Supporting Ingredients: <span className="italic">{renderItems(props.supportingIngredients)}</span></> : <>Supporting Ingredients</>}<br/>
-      {props.sauce ? <>Sauce: <span className="italic">{renderItems(props.sauce)}</span></> : <>Sauce</>}<br/>
-      {props.methods ? <>Cooking Methods: <span className="italic">{renderItems(props.methods)}</span></> : <>Cooking Methods</>}<br/>
-      {props.presentation ? <>Presentation: <span className="italic">{renderItems(props.presentation)}</span></> : <>Presentation</>}<br/>
+      <div className="checklist" data-tip data-for={props.checklist}>
+        <span className="bold">Goals</span><br/>
+        {props.flavors ? <>Flavors: <span className="italic">{props.flavors}</span></> : <>Flavors</>}<br/>
+        {props.textures ? <>Textures: <span className="italic">{props.textures}</span></> : <>Textures</>}<br/>
+        <span className="bold">Implementation</span><br/>
+        {props.keyIngredient ? <>Key Ingredients: <span className="italic">{props.keyIngredient}</span></> : <>Key Ingredients</>}<br/>
+        {props.supportingIngredients ? <>Supporting Ingredients: <span className="italic">{props.supportingIngredients}</span></> : <>Supporting Ingredients</>}<br/>
+        {props.sauce ? <>Sauce: <span className="italic">{props.sauce}</span></> : <>Sauce</>}<br/>
+        {props.methods ? <>Cooking Methods: <span className="italic">{props.methods}</span></> : <>Cooking Methods</>}<br/>
+        {props.presentation ? <>Presentation: <span className="italic">{props.presentation}</span></> : <>Presentation</>}<br/>
+      </div>
+      {props.tooltips && renderTooltip(props.checklist, props.tooltips)}
     </>
   );
 
